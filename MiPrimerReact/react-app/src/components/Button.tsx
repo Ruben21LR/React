@@ -1,0 +1,22 @@
+import type { ReactNode } from "react";
+
+interface Props {
+  children: ReactNode;
+  isLoading: boolean;
+  onClick: () => void;
+}
+
+function Button({ children, isLoading, onClick }: Props) {
+  return (
+    <button
+      disabled={isLoading}
+      onClick={onClick}
+      className={`btn btn-${isLoading ?"secondary" : "primary"}`}
+      type="button"
+    >
+      {isLoading ? "Cargando..." : children}
+    </button>
+  );
+}
+
+export default Button;

@@ -1,7 +1,15 @@
+import { useState } from "react";
 import Card, { CardBody } from "./components/Card";
 import List from "./components/List";
+import Button from "./components/Button";
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(false);
+    const handleClick = () => {
+    setIsLoading(!isLoading);
+  };
+
   const list: string[] = ["Goku", "Naruto", "Spiderman"];
 
   const handleSelect = (elemento: string) => {
@@ -17,6 +25,9 @@ function App() {
       ) : (
         "No hay contenido"
       )}
+      <Button isLoading={isLoading} onClick={handleClick}>
+        Hola mundo
+        </Button> 
     </Card>
   );
 }
