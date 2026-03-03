@@ -44,7 +44,7 @@ function App() {
 
   return (
     <Card>
-      <Button onClick={handleAdd}>Agregar</Button>
+      <Button onClick={handleAdd} >Agregar</Button>
       <Button onClick={handleDelete}>Eliminar</Button>
       <List data={data}></List>
     </Card>
