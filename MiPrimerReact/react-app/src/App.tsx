@@ -44,8 +44,8 @@ function App() {
 
   return (
     <Card>
-      <Button onClick={handleAdd} >Agregar</Button>
-      <Button onClick={handleDelete}>Eliminar</Button>
+      <Button isLoading={true} onClick={handleAdd} >Agregar</Button>
+      <Button isLoading={false} onClick={handleDelete}>Eliminar</Button>
       <List data={data}></List>
     </Card>
   );
